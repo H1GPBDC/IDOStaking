@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
+  <script>
+    function changer(){
+      var apy=document.getElementById('apy')
+      console.log(apy)
+      var sel=document.getElementById('select').value
+      if (sel=='6 Months') {
+        apy.innerHTML='16.8% APY - 6 Months Lock (Claimable Monthly)'
+        console.log(apy)
+      }
+      if (sel=='1 Year') {
+        apy.innerHTML='20.4% APY - 1 Year Lock (Claimable Monthly)'
+        console.log('345')
+      }
+    }
+    document.getElementById('select').addEventListener('change',changer())
+    
+    
+  </script>
+  
+</html>
